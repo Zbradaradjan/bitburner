@@ -7,9 +7,9 @@ const settings = {
 const scriptsToKill = [
   'mainHack.ns',
   'spider.ns',
-  'grow.ns',
-  'hack.ns',
-  'weaken.ns',
+  'grow.js',
+  'hack.js',
+  'weaken.js',
   'playerServers.ns',
   'runHacking.ns',
   'initHacking.ns',
