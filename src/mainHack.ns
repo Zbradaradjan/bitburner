@@ -171,7 +171,7 @@ export async function main(ns) {
     }
     serverMap.servers.home.ram = Math.max(0, serverMap.servers.home.ram - settings.homeRamReserved)
 
-    const vulnerableServers = await vulnerableServers(ns, serverMap.servers)
+    const vulnerableServers = await getHackableServers(ns, serverMap.servers)
 
     const targetServers = findTargetServer(ns, vulnerableServers, serverMap.servers, serverExtraData)
     const bestTarget = targetServers.shift()
