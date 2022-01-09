@@ -248,13 +248,13 @@ export async function main(ns) {
         }
 
         if (growCycles) {
-          await ns.exec('grow.ns', server.host, cyclesToRun, bestTarget, cyclesToRun, growDelay, createUUID())
+          await ns.exec('grow.js', server.host, cyclesToRun, bestTarget, cyclesToRun, growDelay, createUUID())
           growCycles -= cyclesToRun
           cyclesFittable -= cyclesToRun
         }
 
         if (cyclesFittable) {
-          await ns.exec('weaken.ns', server.host, cyclesFittable, bestTarget, cyclesFittable, 0, createUUID())
+          await ns.exec('weaken.js', server.host, cyclesFittable, bestTarget, cyclesFittable, 0, createUUID())
           weakenCycles -= cyclesFittable
         }
       }
